@@ -1,5 +1,4 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
 const config = {
   title: 'Decision Integrity Protocol',
@@ -26,6 +25,7 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: 'docs',
           editUrl:
             'https://github.com/dip-protocol/dip-website/tree/main/site/',
         },
@@ -42,8 +42,6 @@ const config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
-
     navbar: {
       title: 'DIP',
       logo: {
@@ -52,10 +50,9 @@ const config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
+          to: '/docs/intro',
           label: 'Docs',
+          position: 'left',
         },
         {
           href: 'https://github.com/dip-protocol',
@@ -69,7 +66,7 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
             {
               label: 'Introduction',
