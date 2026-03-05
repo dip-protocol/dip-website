@@ -29,11 +29,7 @@ const config = {
           editUrl:
             'https://github.com/dip-protocol/dip-website/tree/main/site/',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl:
-            'https://github.com/dip-protocol/dip-website/tree/main/site/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -43,7 +39,7 @@ const config = {
 
   themeConfig: {
     navbar: {
-      title: 'DIP',
+      title: 'Decision Integrity Protocol',
       logo: {
         alt: 'DIP Logo',
         src: 'img/logo.svg',
@@ -51,7 +47,22 @@ const config = {
       items: [
         {
           to: '/docs/intro',
-          label: 'Docs',
+          label: 'Documentation',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/dip-protocol/dip-spec',
+          label: 'Specification',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/dip-protocol/dip-cli',
+          label: 'CLI',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/dip-protocol/dip-registry',
+          label: 'Registry',
           position: 'left',
         },
         {
@@ -72,13 +83,34 @@ const config = {
               label: 'Introduction',
               to: '/docs/intro',
             },
+            {
+              label: 'Protocol',
+              to: '/docs/protocol',
+            },
+            {
+              label: 'Architecture',
+              to: '/docs/architecture',
+            },
+          ],
+        },
+        {
+          title: 'Repositories',
+          items: [
+            {
+              label: 'DIP Specification',
+              href: 'https://github.com/dip-protocol/dip-spec',
+            },
+            {
+              label: 'DIP CLI',
+              href: 'https://github.com/dip-protocol/dip-cli',
+            },
           ],
         },
         {
           title: 'Community',
           items: [
             {
-              label: 'GitHub',
+              label: 'GitHub Organization',
               href: 'https://github.com/dip-protocol',
             },
           ],
