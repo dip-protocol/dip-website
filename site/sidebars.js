@@ -1,36 +1,40 @@
 const sidebars = {
   docs: [
 
-    'why-dip-matters',
-    'market-opportunity',
-    'roadmap',
-    'intro',
-    'quickstart',
+    {
+      type: 'category',
+      label: 'Overview',
+      items: [
+        'intro',
+        'why-dip-matters',
+        'quickstart'
+      ]
+    },
 
     {
       type: 'category',
-      label: 'Protocol',
+      label: 'Protocol Specification',
       items: [
-        'protocol',
+        'protocol/protocol-overview',
         'protocol/architecture',
         'protocol/decision-artifact',
         'protocol/cryptography',
         'protocol/lifecycle'
-      ],
+      ]
     },
 
     {
       type: 'category',
-      label: 'Components',
+      label: 'Reference Implementations',
       items: [
-        'cli',
-        'registry'
-      ],
+        'components/cli',
+        'components/registry'
+      ]
     },
 
     {
       type: 'category',
-      label: 'Research',
+      label: 'Research Papers',
       items: [
         'research/index',
         'research/deterministic-governance',
@@ -38,7 +42,7 @@ const sidebars = {
         'research/transparency-ledger-model',
         'research/decision-integrity-theory',
         'research/verifiable-decision-infrastructure'
-      ],
+      ]
     },
 
     {
@@ -49,7 +53,7 @@ const sidebars = {
         'use-cases/ai-governance',
         'use-cases/financial-systems',
         'use-cases/regulatory-compliance'
-      ],
+      ]
     },
 
     {
@@ -58,10 +62,18 @@ const sidebars = {
       items: [
         'whitepaper',
         'whitepaper/dip-whitepaper'
-      ],
+      ]
     },
 
-    'architecture'
+    {
+      type: 'category',
+      label: 'Project',
+      items: [
+        'builder',
+        'market-opportunity',
+        'roadmap'
+      ]
+    }
 
   ],
 };
