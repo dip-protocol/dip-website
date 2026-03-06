@@ -1,7 +1,3 @@
-title: Deterministic Governance
-sidebar_position: 2
----
-
 # Deterministic Governance
 
 Deterministic governance refers to governance systems where decisions can be reproduced and verified.
