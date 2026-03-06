@@ -1,5 +1,7 @@
 const sidebars = {
   docs: [
+
+    'why-dip-matters',
     'intro',
     'quickstart',
 
@@ -11,8 +13,8 @@ const sidebars = {
         'protocol/architecture',
         'protocol/decision-artifact',
         'protocol/cryptography',
-        'protocol/lifecycle',
-      ],
+        'protocol/lifecycle'
+      ]
     },
 
     {
@@ -20,8 +22,8 @@ const sidebars = {
       label: 'Components',
       items: [
         'cli',
-        'registry',
-      ],
+        'registry'
+      ]
     },
 
     {
@@ -29,20 +31,25 @@ const sidebars = {
       label: 'Research',
       items: [
         'research/index',
-        'research/decision-integrity-theory',
         'research/deterministic-governance',
-        'research/transparency-ledger-model',
         'research/decision-artifact-specification',
-      ],
+        'research/transparency-ledger-model',
+        'research/decision-integrity-theory',
+        'research/verifiable-decision-infrastructure'
+      ]
     },
 
     {
       type: 'category',
       label: 'Whitepaper',
       items: [
-        'whitepaper/dip-whitepaper',
-      ],
+        'whitepaper',
+        'whitepaper/dip-whitepaper'
+      ]
     },
+
+    'architecture'
+
   ],
 };
 
