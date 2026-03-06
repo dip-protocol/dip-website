@@ -6,13 +6,25 @@
 
 # 
 
-# The Decision Integrity Protocol defines a standard format for \*\*verifiable decision artifacts\*\*.
+# The Decision Integrity Protocol defines a structured format for producing \*\*verifiable decision artifacts\*\*.
 
 # 
 
-# A decision artifact records the inputs, outputs, and metadata associated with a decision event.  
+# A decision artifact records:
 
-# Artifacts can be cryptographically signed and independently verified.
+# 
+
+# \- inputs used in a decision
+
+# \- outputs produced by a system
+
+# \- metadata describing the system
+
+# \- a cryptographic signature
+
+# 
+
+# Artifacts allow independent systems to verify that a decision occurred as recorded.
 
 # 
 
@@ -20,29 +32,29 @@
 
 # 
 
-# Modern automated systems make critical decisions across:
+# Modern automated systems make decisions in critical domains:
 
 # 
-
-# \- finance
 
 # \- artificial intelligence
 
-# \- governance
+# \- financial systems
 
-# \- compliance
+# \- governance platforms
 
-# 
-
-# However, these systems typically provide \*\*no verifiable evidence describing how a decision was generated\*\*.
+# \- regulatory compliance systems
 
 # 
 
-# The Decision Integrity Protocol addresses this gap.
+# Most systems today provide \*\*no verifiable record explaining how a decision occurred\*\*.
 
 # 
 
-# \# Artifact Structure
+# The Decision Integrity Protocol introduces a standardized method to produce \*\*verifiable decision records\*\*.
+
+# 
+
+# \# Artifact Fields
 
 # 
 
@@ -50,71 +62,75 @@
 
 # 
 
-# \- decision identifier
+# • decision\_id  
 
-# \- timestamp
+# • timestamp  
 
-# \- inputs
+# • inputs  
 
-# \- outputs
+# • outputs  
 
-# \- metadata
+# • metadata  
 
-# \- signature
+# • signature  
 
-# \- protocol version
-
-# 
-
-# \# Example Decision Artifact
+# • protocol\_version  
 
 # 
 
-# json
+# These fields allow a verifier to reconstruct the decision context.
 
-# {
+# 
 
-# &nbsp; "decision\_id": "dec-2026-001",
+# \# Artifact Example
 
-# &nbsp; "version": "1.0",
+# 
 
-# &nbsp; "timestamp": "2026-03-06T10:15:00Z",
+# Example artifact structure:
 
-# &nbsp; "inputs": {
+# 
 
-# &nbsp;   "customer\_id": "12345",
+# decision\_id: dec-2026-001  
 
-# &nbsp;   "transaction\_amount": 250
+# timestamp: 2026-03-06T10:15:00Z  
 
-# &nbsp; },
+# 
 
-# &nbsp; "outputs": {
+# inputs:
 
-# &nbsp;   "decision": "approved",
+# \- customer\_id: 12345
 
-# &nbsp;   "risk\_score": 0.12
+# \- transaction\_amount: 250
 
-# &nbsp; },
+# 
 
-# &nbsp; "metadata": {
+# outputs:
 
-# &nbsp;   "system": "fraud-detection-service",
+# \- decision: approved
 
-# &nbsp;   "model\_version": "3.2"
+# \- risk\_score: 0.12
 
-# &nbsp; },
+# 
 
-# &nbsp; "signature": {
+# metadata:
 
-# &nbsp;   "algorithm": "ed25519",
+# \- system: fraud-detection-service
 
-# &nbsp;   "public\_key": "BASE64\_PUBLIC\_KEY",
+# \- model\_version: 3.2
 
-# &nbsp;   "value": "BASE64\_SIGNATURE"
+# 
 
-# &nbsp; }
+# signature:
 
-# }
+# \- algorithm: ed25519
+
+# \- public\_key: BASE64\_KEY
+
+# \- value: BASE64\_SIGNATURE
+
+# 
+
+# version: 1.0
 
 # 
 
@@ -130,23 +146,23 @@
 
 # 
 
-# \- deterministic serialization
+# • deterministic serialization  
 
-# \- consistent hashing
+# • identical hashing across systems  
 
-# \- cross-platform verification
-
-# 
-
-# Typical canonicalization steps include:
+# • consistent verification  
 
 # 
 
-# 1\. deterministic JSON ordering
+# Typical canonicalization includes:
 
-# 2\. whitespace normalization
+# 
 
-# 3\. UTF-8 encoding
+# 1\. deterministic JSON ordering  
+
+# 2\. UTF-8 encoding  
+
+# 3\. whitespace normalization  
 
 # 
 
@@ -154,21 +170,21 @@
 
 # 
 
-# The protocol uses \*\*Ed25519 cryptographic signatures\*\*.
+# The protocol uses \*\*Ed25519 signatures\*\*.
 
 # 
 
-# Signing process:
+# Signing workflow:
 
 # 
 
-# 1\. canonicalize the artifact
+# 1\. canonicalize the artifact  
 
-# 2\. compute the artifact hash
+# 2\. compute the artifact hash  
 
-# 3\. sign the hash with a private key
+# 3\. sign the hash using a private key  
 
-# 4\. attach the signature object
+# 4\. attach the signature  
 
 # 
 
@@ -176,37 +192,33 @@
 
 # 
 
-# ```bash
+# ```
 
 # dip sign decision-record.json
 
 # ```
 
-# 
-
 # \# Verification
 
 # 
 
-# Verification checks:
+# Independent systems can verify:
 
 # 
 
-# \- artifact structure
+# • artifact integrity  
 
-# \- canonicalization
+# • signature validity  
 
-# \- cryptographic signature
-
-# \- registry integrity
+# • registry inclusion  
 
 # 
 
-# Example CLI command:
+# Example command:
 
 # 
 
-# ```bash
+# ```
 
 # dip verify decision-record.json
 
@@ -216,41 +228,27 @@
 
 # 
 
-# Artifacts may be published into an \*\*append-only registry\*\*.
+# Artifacts may be published to an \*\*append-only transparency registry\*\*.
 
 # 
 
-# Registry entries contain:
+# Registry entries link records through hashes, forming a tamper-evident chain.
 
 # 
 
-# \- artifact hash
-
-# \- previous hash
-
-# \- timestamp
+# Registry records include:
 
 # 
 
-# Example registry entry:
+# • artifact hash  
+
+# • previous record hash  
+
+# • timestamp  
 
 # 
 
-# ```json
-
-# {
-
-# &nbsp; "record\_id": "reg-2026-010",
-
-# &nbsp; "artifact\_hash": "sha256:abcd1234",
-
-# &nbsp; "previous\_hash": "sha256:9876abcd",
-
-# &nbsp; "timestamp": "2026-03-06T10:20:00Z"
-
-# }
-
-# ```
+# This ensures historical integrity.
 
 # 
 
@@ -258,39 +256,31 @@
 
 # 
 
-# The protocol provides several security guarantees:
+# The protocol provides several guarantees.
 
 # 
 
-# \*\*Integrity\*\*
+# Integrity  
+
+# Artifacts cannot be modified without breaking the signature.
 
 # 
 
-# Artifacts cannot be modified without invalidating the signature.
+# Authenticity  
+
+# Artifacts can be verified using the system’s public key.
 
 # 
 
-# \*\*Authenticity\*\*
+# Transparency  
+
+# Publishing artifacts creates an auditable decision history.
 
 # 
 
-# Artifacts are verifiably produced by authorized systems.
+# Determinism  
 
-# 
-
-# \*\*Transparency\*\*
-
-# 
-
-# Registry publication creates tamper-evident history.
-
-# 
-
-# \*\*Determinism\*\*
-
-# 
-
-# Canonicalization ensures consistent verification.
+# Canonicalization ensures reproducible verification.
 
 # 
 
@@ -302,15 +292,15 @@
 
 # 
 
-# \- AI decision auditing
+# • AI decision auditing  
 
-# \- financial transaction verification
+# • financial transaction verification  
 
-# \- compliance reporting
+# • compliance automation  
 
-# \- governance transparency
+# • governance transparency  
 
-# \- automated regulation systems
+# • machine learning oversight  
 
 # 
 
@@ -318,7 +308,7 @@
 
 # 
 
-# The Decision Artifact Specification defines a standard method for producing \*\*verifiable decision records\*\*.
+# The Decision Artifact Specification provides a standardized method for producing \*\*verifiable decision records\*\*.
 
 # 
 
