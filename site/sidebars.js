@@ -8,7 +8,10 @@ module.exports = {
       label: 'Research',
       items: [
         'research/index',
-        'research/decision-integrity-theory'
+        'research/decision-integrity-theory',
+        'research/deterministic-governance',
+        'research/decision-artifact-specification',
+        'research/transparency-ledger-model'
       ],
     },
   ],
