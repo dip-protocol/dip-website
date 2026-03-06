@@ -1,0 +1,156 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{setspace}
+
+\setstretch{1.15}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\title{
+\Huge Decision Integrity Protocol (DIP) \\
+\vspace{0.5em}
+\Large A Cryptographic Framework for Deterministic Governance
+}
+
+\author{
+Pavan Dev Singh Charak \\
+Deterministic Governance
+}
+
+\date{2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Decision Integrity Protocol (DIP) introduces a cryptographic framework
+for deterministic governance and verifiable decision systems.
+The protocol enables organizations and automated systems to produce
+cryptographically verifiable evidence of decisions, ensuring
+accountability, reproducibility, and auditability.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+Organizations increasingly rely on automated and distributed systems
+to make operational and governance decisions. However, verifying that
+these decisions remain consistent, reproducible, and auditable is
+challenging.
+
+Decision Integrity Protocol (DIP) addresses this challenge by
+introducing a deterministic framework for decision documentation and
+verification.
+
+\section{Problem Statement}
+
+Many existing governance and automation systems lack:
+
+\begin{itemize}
+\item Deterministic decision records
+\item Verifiable evidence generation
+\item Independent audit capability
+\item Cryptographic proof of decisions
+\end{itemize}
+
+This creates significant accountability gaps.
+
+\section{Protocol Architecture}
+
+The DIP architecture consists of four primary components:
+
+\begin{enumerate}
+\item Documentation Engine
+\item Decision Payload
+\item Decision Ledger
+\item Verification Layer
+\end{enumerate}
+
+These components work together to ensure that every decision produces
+verifiable evidence.
+
+\section{Decision Payload Model}
+
+A decision payload is the canonical representation of a decision
+event.
+
+It includes structured metadata describing:
+
+\begin{itemize}
+\item decision context
+\item decision inputs
+\item decision outcome
+\item execution metadata
+\end{itemize}
+
+\section{Decision Ledger}
+
+The Decision Ledger is an append-only evidence registry that stores
+signed decision payloads.
+
+The ledger ensures:
+
+\begin{itemize}
+\item immutability of decision evidence
+\item chronological ordering
+\item independent verification
+\end{itemize}
+
+\section{Verification Model}
+
+Independent verifiers can validate decision records by verifying:
+
+\begin{enumerate}
+\item payload canonicalization
+\item cryptographic signatures
+\item ledger append integrity
+\end{enumerate}
+
+\section{Security Model}
+
+The protocol assumes adversaries may attempt to:
+
+\begin{itemize}
+\item modify decision records
+\item fabricate decision evidence
+\item manipulate execution logs
+\end{itemize}
+
+DIP mitigates these risks through canonical payload generation,
+cryptographic signatures, and append-only ledger structures.
+
+\section{Implementation}
+
+Reference implementations of DIP are available in the public
+repositories maintained under the DIP protocol organization.
+
+\section{Future Work}
+
+Future protocol extensions may include:
+
+\begin{itemize}
+\item decentralized verification networks
+\item governance frameworks
+\item cross-system decision interoperability
+\end{itemize}
+
+\section{Conclusion}
+
+Decision Integrity Protocol provides a foundation for deterministic
+and verifiable governance systems, enabling organizations and
+automated systems to produce reliable, audit-ready decision evidence.
+
+\end{document}

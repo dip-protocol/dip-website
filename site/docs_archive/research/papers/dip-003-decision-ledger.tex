@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\title{DIP-003: Append-Only Decision Ledgers\\
+Verifiable Evidence Registries}
+
+\author{Pavan Dev Singh Charak}
+
+\date{2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+This document describes the Decision Ledger used in the
+Decision Integrity Protocol (DIP). The ledger is an append-only
+registry that stores signed decision payloads and ensures
+integrity of historical decision evidence.
+
+\end{abstract}
+
+\section{Introduction}
+
+Decision systems require reliable methods to store
+historical decision records. Traditional logging systems
+are often mutable and difficult to verify.
+
+The Decision Ledger provides an append-only evidence
+registry for storing signed decision payloads.
+
+\section{Ledger Model}
+
+The Decision Ledger records decision payloads in a
+chronologically ordered append-only structure.
+
+Each entry contains:
+
+\begin{itemize}
+\item Canonical decision payload
+\item Cryptographic signature
+\item Ledger timestamp
+\end{itemize}
+
+\section{Append-Only Guarantees}
+
+The ledger enforces append-only semantics:
+
+\begin{itemize}
+\item Existing records MUST NOT be modified
+\item New records MAY only be appended
+\item Ledger history MUST remain intact
+\end{itemize}
+
+\section{Ledger Entry Example}
+
+\begin{verbatim}
+{
+  "ledger_index": 152,
+  "decision_id": "abc123",
+  "timestamp": "2026-03-06T10:30:00Z",
+  "payload_hash": "f8c9a...",
+  "signature": "ed25519..."
+}
+\end{verbatim}
+
+\section{Ledger Integrity}
+
+Ledger integrity may be ensured through:
+
+\begin{itemize}
+\item cryptographic hashing
+\item chained ledger entries
+\item independent verification
+\end{itemize}
+
+\section{Auditability}
+
+Because the ledger is append-only, auditors can reconstruct
+the complete history of decision records and validate
+decision integrity.
+
+\section{Conclusion}
+
+The Decision Ledger provides the foundational evidence
+registry that enables verifiable decision systems.
+
+\end{document}

@@ -1,0 +1,98 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\title{DIP-001: Decision Integrity Protocol (DIP)\\
+A Cryptographic Framework for Deterministic Governance}
+
+\author{Pavan Dev Singh Charak}
+
+\date{2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+The Decision Integrity Protocol (DIP) introduces a cryptographic
+framework for deterministic governance and verifiable decision systems.
+The protocol ensures that organizational and automated decisions
+produce verifiable evidence that can be independently audited.
+
+\end{abstract}
+
+\section{Introduction}
+
+Modern organizations rely heavily on automated systems and complex
+decision processes. However, many systems lack mechanisms to produce
+verifiable evidence describing how decisions were made.
+
+The Decision Integrity Protocol addresses this challenge by introducing
+a deterministic framework for documenting and verifying decision events.
+
+\section{Problem Statement}
+
+Decision systems often suffer from:
+
+\begin{itemize}
+\item lack of verifiable decision history
+\item fragmented audit trails
+\item inability to reproduce decisions
+\end{itemize}
+
+These limitations create governance and accountability challenges.
+
+\section{Protocol Architecture}
+
+The Decision Integrity Protocol consists of four primary components:
+
+\begin{itemize}
+\item Documentation Engine
+\item Decision Payload
+\item Decision Ledger
+\item Verification Layer
+\end{itemize}
+
+These components ensure that every decision produces cryptographically
+verifiable evidence.
+
+\section{Decision Payload}
+
+A decision payload represents the canonical record of a decision event.
+
+\begin{verbatim}
+{
+ "decision_id": "abc123",
+ "timestamp": "2026-03-06T10:30:00Z",
+ "actor": "system",
+ "action": "approve_transaction",
+ "result": "approved"
+}
+\end{verbatim}
+
+\section{Decision Ledger}
+
+The decision ledger is an append-only registry that stores signed
+decision payloads.
+
+This ensures that historical decision records cannot be altered.
+
+\section{Verification}
+
+Independent verifiers can validate decision integrity by checking:
+
+\begin{itemize}
+\item payload canonicalization
+\item signature validity
+\item ledger inclusion
+\end{itemize}
+
+\section{Conclusion}
+
+Decision Integrity Protocol enables deterministic governance systems
+that provide cryptographically verifiable decision records.
+
+\end{document}

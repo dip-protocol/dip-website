@@ -1,68 +1,150 @@
 ````markdown
-# Quick Start
 
-This guide shows how to create and verify a Decision Integrity Protocol (DIP) artifact.
+---
 
-## 1. Create a Decision Record
+title: Quick Start
 
-Create a JSON file describing the decision.
+sidebar\_label: Quick Start
 
-Example:
+---
+
+
+
+\# Quick Start
+
+
+
+This guide shows how to generate and verify a decision artifact
+
+using the \*\*Decision Integrity Protocol (DIP)\*\*.
+
+
+
+---
+
+
+
+\## 1. Install DIP CLI
+
+
+
+Clone the repository:
+
+
+
+```bash
+
+git clone https://github.com/dip-protocol/dip-cli
+
+cd dip-cli
+
+go build
+
+````
+
+
+
+---
+
+
+
+\## 2. Create a Decision Artifact
+
+
+
+Create a file called `decision.json`.
+
+
 
 ```json
+
 {
-  "version": "1.0",
-  "decision_id": "example-001",
-  "timestamp": "2026-03-06T12:00:00Z",
-  "inputs": {},
-  "outputs": {}
+
+&nbsp; "decision\_id": "example-001",
+
+&nbsp; "timestamp": "2026-03-07T12:00:00Z",
+
+&nbsp; "actor": "system",
+
+&nbsp; "action": "approve\_request",
+
+&nbsp; "result": "approved"
+
 }
-````
-
-Save this file as:
 
 ```
-decision.json
-```
+
+
 
 ---
 
-## 2. Sign the Artifact
 
-Use the DIP CLI to sign the decision artifact.
+
+\## 3. Sign the Decision
+
+
 
 ```bash
+
 dip sign decision.json
+
 ```
 
-This command generates a cryptographic signature for the decision record.
+
+
+This produces a \*\*signed decision artifact\*\*.
+
+
 
 ---
 
-## 3. Verify the Artifact
 
-Verify the integrity of the artifact.
+
+\## 4. Append to the Decision Ledger
+
+
 
 ```bash
-dip verify decision.json
+
+dip-registry append decision.json
+
 ```
 
-Verification confirms that:
 
-* the artifact has not been modified
-* the signature is valid
+
+This records the decision artifact in the \*\*append-only ledger\*\*.
+
+
 
 ---
 
-## Result
 
-You now have a **cryptographically verifiable decision artifact**.
 
-This artifact can be:
+\## 5. Verify the Artifact
 
-* stored in a registry
-* shared with other systems
-* independently verified
 
-````
+
+```bash
+
+dip-verify decision.json
+
+```
+
+
+
+The verifier checks:
+
+
+
+\* artifact integrity
+
+\* signature validity
+
+\* ledger record
+
+
+
+```
+
+
 

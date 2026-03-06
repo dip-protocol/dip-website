@@ -1,119 +1,93 @@
 ```markdown
-# DIP Architecture
+---
+title: Architecture
+sidebar_label: Architecture
+---
 
-The **Decision Integrity Protocol (DIP)** provides a framework for producing,
-signing, storing, and verifying decision artifacts.
+# Architecture
 
-DIP enables automated systems to generate decisions that can be independently
-verified for integrity and authenticity.
+The **Decision Integrity Protocol (DIP)** provides a framework for
+producing and verifying deterministic decision records.
+
+The protocol consists of four primary components.
 
 ---
 
-## System Overview
-
-A typical DIP workflow looks like this:
+## System Architecture
 
 ```
 
-Decision Engine
-↓
-Decision Record
-↓
-DIP CLI (Sign)
-↓
-Signed DIP Artifact
-↓
-Registry Storage
-↓
-Independent Verification
+Execution System
+│
+▼
+Documentation Engine
+│
+▼
+Decision Payload
+│
+▼
+Decision Ledger
+│
+▼
+Verification Engine
 
-````
-
----
-
-## Components
-
-### Decision Engine
-
-A system that produces a decision based on inputs.
-
-Examples include:
-
-- automated workflows
-- governance systems
-- approval systems
-- policy engines
+```
 
 ---
 
-### Decision Record
+## Execution System
 
-A **structured JSON document** describing a decision.
+The execution system is the environment where decisions occur.
+This may include applications, services, automated workflows,
+or AI systems.
 
-A decision record contains:
+The execution system generates events that are transformed into
+decision artifacts.
 
-- metadata
-- decision inputs
-- decision outputs
+---
+
+## Documentation Engine
+
+The documentation engine produces structured decision artifacts
+from execution events.
+
+Artifacts contain the data required to reconstruct and verify
+how a decision was made.
+
+---
+
+## Decision Payload
+
+The decision payload is the canonical representation of a
+decision event.
+
+Payloads contain:
+
+- decision identifier
 - timestamp
-
-Example:
-
-```json
-{
-  "version": "1.0",
-  "decision_id": "example-001",
-  "timestamp": "2026-03-06T12:00:00Z",
-  "inputs": {},
-  "outputs": {}
-}
-````
+- decision inputs
+- decision outcome
+- metadata
 
 ---
 
-### DIP CLI
+## Decision Ledger
 
-The reference implementation used to sign and verify artifacts.
+The decision ledger is an append-only registry that stores
+signed decision payloads.
 
-Example commands:
+The ledger ensures that decision records cannot be modified
+or removed once published.
 
-```bash
-dip sign decision.json
-dip verify decision.json
+---
+
+## Verification Engine
+
+The verification engine independently validates decision artifacts.
+
+Verification ensures that:
+
+- the payload is valid  
+- the signature is correct  
+- the artifact exists in the ledger
 ```
-
----
-
-### DIP Registry
-
-The registry stores signed decision artifacts.
-
-Key properties:
-
-* append-only storage
-* historical record preservation
-* independent verification support
-
----
-
-### Verification
-
-Any system can independently verify a DIP artifact.
-
-Verification ensures:
-
-* artifact integrity
-* valid signature
-* decision authenticity
-
----
-
-## Goals
-
-DIP aims to provide:
-
-* deterministic decision artifacts
-* cryptographic integrity guarantees
-* transparent and verifiable automation
-
-````

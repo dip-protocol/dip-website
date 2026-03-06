@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\title{DIP-002: Decision Integrity Protocol Specification\\
+Canonical Payload and Verification Rules}
+
+\author{Pavan Dev Singh Charak}
+
+\date{2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+This document specifies the canonical payload structure,
+signing rules, and verification procedures used by the
+Decision Integrity Protocol (DIP).
+
+\end{abstract}
+
+\section{Protocol Overview}
+
+The Decision Integrity Protocol defines a deterministic
+process for generating and verifying decision evidence.
+
+The protocol includes the following stages:
+
+\begin{enumerate}
+\item Decision Execution
+\item Payload Construction
+\item Payload Canonicalization
+\item Payload Signing
+\item Ledger Append
+\item Verification
+\end{enumerate}
+
+\section{Decision Payload Schema}
+
+The canonical decision payload has the following structure:
+
+\begin{verbatim}
+{
+  "protocol_version": "1.0",
+  "decision_id": "string",
+  "timestamp": "ISO-8601",
+  "actor": "string",
+  "action": "string",
+  "inputs": {...},
+  "result": "string",
+  "signature": "ed25519"
+}
+\end{verbatim}
+
+\section{Canonicalization}
+
+Before signing, the decision payload MUST be canonicalized.
+
+Canonicalization ensures that identical decision records
+produce identical serialized payload representations.
+
+\section{Signature Scheme}
+
+Implementations SHOULD use the Ed25519 signature scheme.
+
+The signing process:
+
+\begin{enumerate}
+\item Serialize canonical payload
+\item Compute payload hash
+\item Generate Ed25519 signature
+\end{enumerate}
+
+\section{Ledger Append}
+
+Signed payloads MUST be appended to an append-only
+decision ledger.
+
+The ledger ensures chronological ordering and
+immutability of decision evidence.
+
+\section{Verification Procedure}
+
+Verification of a decision record involves:
+
+\begin{enumerate}
+\item Parse decision payload
+\item Reconstruct canonical payload
+\item Verify cryptographic signature
+\item Confirm ledger inclusion
+\end{enumerate}
+
+\section{Protocol Versioning}
+
+Each payload MUST include a protocol version field
+to support forward compatibility.
+
+\section{Conclusion}
+
+This specification defines the core rules required
+to generate and verify deterministic decision evidence.
+
+\end{document}
