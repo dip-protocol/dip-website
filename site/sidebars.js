@@ -1,9 +1,15 @@
 module.exports = {
   tutorialSidebar: [
     'intro',
-    'protocol',
-    'cli',
-    'registry',
     'architecture',
+    'whitepaper',
+    {
+      type: 'category',
+      label: 'Research',
+      items: [
+        'research/index',
+        'research/decision-integrity-theory'
+      ],
+    },
   ],
 };
