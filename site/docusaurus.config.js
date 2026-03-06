@@ -1,12 +1,14 @@
 // @ts-check
+import {themes as prismThemes} from 'prism-react-renderer';
 
+/** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Decision Integrity Protocol',
-  tagline: 'Deterministic and cryptographically verifiable decision artifacts',
-  favicon: 'img/favicon.ico',
 
-  url: 'https://dip-protocol.github.io',
-  baseUrl: '/dip-website/',
+  title: 'Decision Integrity Protocol',
+  tagline: 'Cryptographic protocol for verifiable decisions',
+
+  url: 'http://deterministicgovernance.org',
+  baseUrl: '/',
 
   organizationName: 'dip-protocol',
   projectName: 'dip-website',
@@ -14,111 +16,73 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+  favicon: 'img/favicon.ico',
 
   presets: [
     [
       'classic',
-      {
+      ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: 'docs',
-          editUrl:
-            'https://github.com/dip-protocol/dip-website/tree/main/site/',
+          sidebarPath: './sidebars.js',
+          routeBasePath: '/docs',
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: './src/css/custom.css',
         },
-      },
+      }),
     ],
   ],
 
-  themeConfig: {
-    navbar: {
-      title: 'Decision Integrity Protocol',
-      logo: {
-        alt: 'DIP Logo',
-        src: 'img/logo.svg',
+  themeConfig:
+    ({
+      navbar: {
+        title: 'DIP',
+        items: [
+          {
+            to: '/docs/intro',
+            label: 'Documentation',
+            position: 'left',
+          },
+          {
+            href: 'https://github.com/dip-protocol',
+            label: 'GitHub',
+            position: 'right',
+          },
+        ],
       },
-      items: [
-        {
-          to: '/docs/intro',
-          label: 'Documentation',
-          position: 'left',
-        },
-        {
-          href: 'https://github.com/dip-protocol/dip-spec',
-          label: 'Specification',
-          position: 'left',
-        },
-        {
-          href: 'https://github.com/dip-protocol/dip-cli',
-          label: 'CLI',
-          position: 'left',
-        },
-        {
-          href: 'https://github.com/dip-protocol/dip-registry',
-          label: 'Registry',
-          position: 'left',
-        },
-        {
-          href: 'https://github.com/dip-protocol',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
 
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Documentation',
-          items: [
-            {
-              label: 'Introduction',
-              to: '/docs/intro',
-            },
-            {
-              label: 'Protocol',
-              to: '/docs/protocol',
-            },
-            {
-              label: 'Architecture',
-              to: '/docs/architecture',
-            },
-          ],
-        },
-        {
-          title: 'Repositories',
-          items: [
-            {
-              label: 'DIP Specification',
-              href: 'https://github.com/dip-protocol/dip-spec',
-            },
-            {
-              label: 'DIP CLI',
-              href: 'https://github.com/dip-protocol/dip-cli',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'GitHub Organization',
-              href: 'https://github.com/dip-protocol',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Decision Integrity Protocol`,
-    },
-  },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Introduction',
+                to: '/docs/intro',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/dip-protocol',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} Decision Integrity Protocol`,
+      },
+
+      prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+      },
+
+    }),
 };
 
-module.exports = config;
+export default config;
