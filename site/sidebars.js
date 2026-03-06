@@ -2,7 +2,15 @@ module.exports = {
   tutorialSidebar: [
     'intro',
     'architecture',
-    'whitepaper',
+
+    {
+      type: 'category',
+      label: 'Whitepaper',
+      items: [
+        'whitepaper/dip-whitepaper'
+      ],
+    },
+
     {
       type: 'category',
       label: 'Research',
