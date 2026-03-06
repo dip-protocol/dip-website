@@ -1,10 +1,10 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
+/** @type {import('@docusaurus/types').Config} */
 const config = {
 
   title: 'Decision Integrity Protocol',
-  tagline: 'Verifiable Decision Systems',
+  tagline: 'Verifiable Decision Infrastructure',
   favicon: 'img/favicon.ico',
 
   url: 'https://dip-protocol.github.io',
@@ -38,14 +38,34 @@ const config = {
   ],
 
   themeConfig: {
+
     navbar: {
       title: 'DIP',
+      logo: {
+        alt: 'DIP Logo',
+        src: 'img/dip-logo.png',
+      },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'docs',
           position: 'left',
           label: 'Documentation',
+        },
+        {
+          to: '/docs/why-dip-matters',
+          label: 'Why DIP',
+          position: 'left',
+        },
+        {
+          to: '/docs/market-opportunity',
+          label: 'Market',
+          position: 'left',
+        },
+        {
+          to: '/docs/roadmap',
+          label: 'Roadmap',
+          position: 'left',
         },
         {
           href: 'https://github.com/dip-protocol',
@@ -59,19 +79,19 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: 'Documentation',
+          title: 'Docs',
           items: [
             {
-              label: 'Introduction',
-              to: '/docs/intro',
+              label: 'Why DIP Matters',
+              to: '/docs/why-dip-matters',
             },
             {
-              label: 'Protocol',
-              to: '/docs/protocol',
+              label: 'Market Opportunity',
+              to: '/docs/market-opportunity',
             },
             {
-              label: 'Whitepaper',
-              to: '/docs/whitepaper/dip-whitepaper',
+              label: 'Roadmap',
+              to: '/docs/roadmap',
             },
           ],
         },
@@ -87,7 +107,9 @@ const config = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Decision Integrity Protocol`,
     },
+
   },
+
 };
 
 module.exports = config;
