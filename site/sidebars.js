@@ -3,6 +3,7 @@ const sidebars = {
 
     'why-dip-matters',
     'market-opportunity',
+    'roadmap',
     'intro',
     'quickstart',
 
