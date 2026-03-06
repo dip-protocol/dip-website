@@ -1,3 +1,5 @@
+## ---
+
 ## title: DIP Whitepaper
 
 ## sidebar\_position: 1
@@ -14,11 +16,7 @@
 
 ## 
 
-## The Decision Integrity Protocol (DIP) defines a framework for producing cryptographically verifiable decision artifacts.
-
-## 
-
-## Automated systems often produce decisions without verifiable evidence explaining how the decision was generated. DIP addresses this problem by creating signed decision artifacts that can be independently verified.
+## The Decision Integrity Protocol (DIP) provides a framework for producing verifiable decision artifacts using cryptographic signatures and append-only transparency registries.
 
 ## 
 
@@ -46,15 +44,13 @@
 
 ## 
 
-## Automated decision systems increasingly influence financial systems, governance systems, and machine learning services.
+## Modern automated systems increasingly make important decisions.  
+
+## However, many of these systems fail to produce verifiable evidence explaining how decisions were generated.
 
 ## 
 
-## However, these systems often lack transparency and auditability.
-
-## 
-
-## DIP introduces a protocol that enables systems to generate verifiable decision records.
+## The Decision Integrity Protocol enables systems to produce signed decision artifacts that can be independently verified.
 
 ## 
 
@@ -66,7 +62,7 @@
 
 ## 
 
-## A decision artifact is a structured JSON record describing a decision.
+## A decision artifact is a structured record describing a decision.
 
 ## 
 
@@ -118,145 +114,147 @@
 
 ## }
 
-## 3\. Cryptographic Signing
 
-## 
 
-## DIP uses Ed25519 signatures to guarantee artifact integrity.
+3\. Cryptographic Signing
 
-## 
 
-## Signing process:
 
-## 
+DIP uses Ed25519 signatures to ensure artifact integrity.
 
-## Canonicalize the artifact JSON
 
-## 
 
-## Compute a cryptographic hash
+Signing process:
 
-## 
 
-## Sign the hash using the private key
 
-## 
+Canonicalize the artifact JSON
 
-## Verification process:
 
-## 
 
-## Recompute the artifact hash
+Compute a cryptographic hash
 
-## 
 
-## Verify the signature using the public key
 
-## 
+Sign the hash using a private key
 
-## 4\. Transparency Registry
 
-## 
 
-## Artifacts may be published into an append-only transparency registry.
+Verification process:
 
-## 
 
-## Each registry record contains:
 
-## 
+Recompute the artifact hash
 
-## artifact
 
-## 
 
-## previous hash
+Verify the signature using the public key
 
-## 
 
-## record hash
 
-## 
+4\. Transparency Registry
 
-## This creates a tamper-evident chain.
 
-## 
 
-## 5\. Verification
+Artifacts can be published into an append-only registry.
 
-## 
 
-## Verification ensures:
 
-## 
+Each record stores:
 
-## artifact integrity
 
-## 
 
-## signature validity
+artifact
 
-## 
 
-## registry consistency
 
-## 
+previous hash
 
-## Independent systems can perform verification without trusting the original producer.
 
-## 
 
-## 6\. Applications
+record hash
 
-## 
 
-## Possible applications include:
 
-## 
+This creates a tamper-evident chain of evidence.
 
-## machine learning decision auditing
 
-## 
 
-## financial transaction verification
+5\. Verification
 
-## 
 
-## governance transparency
 
-## 
+Independent verifiers can check:
 
-## regulatory compliance
 
-## 
 
-## 7\. Future Work
+artifact integrity
 
-## 
 
-## Future development areas include:
 
-## 
+signature validity
 
-## multi-language verification libraries
 
-## 
 
-## decentralized registries
+registry chain consistency
 
-## 
 
-## governance proposals
 
-## 
+Verification does not require trusting the system that generated the artifact.
 
-## protocol standardization
 
-## 
 
-## Conclusion
+6\. Applications
 
-## 
 
-## The Decision Integrity Protocol enables verifiable decision systems through structured artifacts, cryptographic signatures, and transparency registries.
+
+Potential applications include:
+
+
+
+machine learning decision auditing
+
+
+
+financial transaction verification
+
+
+
+governance transparency
+
+
+
+compliance evidence
+
+
+
+7\. Future Work
+
+
+
+Future research may include:
+
+
+
+additional verification libraries
+
+
+
+distributed registries
+
+
+
+governance proposals
+
+
+
+protocol standardization
+
+
+
+Conclusion
+
+
+
+The Decision Integrity Protocol enables verifiable decision systems by combining structured artifacts, cryptographic signatures, and transparency registries.
 
