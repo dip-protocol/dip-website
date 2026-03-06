@@ -1,17 +1,30 @@
-<h1>Decision Integrity Protocol (DIP)</h1>
+import React from 'react';
 
-<p>
-DIP is a cryptographic protocol for producing verifiable decision artifacts.
-It enables systems to generate signed decision records that can be independently verified.
-</p>
+export default function Home() {
+  return (
+    <div style={{padding: "40px"}}>
 
-<h2>Core Components</h2>
+      <h1>Decision Integrity Protocol (DIP)</h1>
 
-<ul>
-<li>Decision Artifact Specification</li>
-<li>Cryptographic Signing</li>
-<li>Verification Engine</li>
-<li>Transparency Registry</li>
-</ul>
+      <p>
+        DIP is a cryptographic protocol for producing verifiable decision artifacts.
+        It enables systems to generate signed decision records that can be independently verified.
+      </p>
 
-<a href="/dip-website/docs/intro">Read the Documentation</a>
+      <h2>Core Components</h2>
+
+      <ul>
+        <li>Decision Artifact Specification</li>
+        <li>Cryptographic Signing</li>
+        <li>Verification Engine</li>
+        <li>Transparency Registry</li>
+      </ul>
+
+      <p>
+        Explore the documentation to understand how DIP enables deterministic governance
+        and verifiable decision systems.
+      </p>
+
+    </div>
+  );
+}

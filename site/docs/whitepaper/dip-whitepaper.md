@@ -410,7 +410,7 @@ Each component may operate independently.
 
 
 
-!\[DIP Architecture](/diagrams/dip-architecture.png)
+![DIP Architecture](/diagrams/dip-architecture.png)
 
 
 
