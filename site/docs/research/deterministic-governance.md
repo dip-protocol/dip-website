@@ -1,94 +1,61 @@
 title: Deterministic Governance
-
-sidebar\_position: 2
-
+sidebar_position: 2
 ---
 
-
-
-\# Deterministic Governance
-
-
+# Deterministic Governance
 
 Deterministic governance refers to governance systems where decisions can be reproduced and verified.
 
+Traditional governance processes rely on trust or institutional authority. Deterministic governance replaces trust with verifiable decision artifacts.
 
+## Principle
 
-Traditional governance processes rely on trust, authority, or institutional procedures. Deterministic governance replaces trust with verifiable evidence.
+A governance decision should produce a verifiable artifact containing:
 
+- inputs
+- outputs
+- metadata
+- signature
 
+## Governance Artifact
 
-\## Principle
+Example governance artifact:
 
-
-
-A governance decision must produce a verifiable artifact describing:
-
-
-
-\- inputs
-
-\- decision logic
-
-\- outputs
-
-\- signature
-
-
-
-\## Governance Artifact
-
-
-
-A governance artifact represents the complete context of a decision.
-
-
-
-Example:
-
-
-
-
-
+```json
 {
-
-decision\_id,
-
-inputs,
-
-outputs,
-
-metadata,
-
-signature
-
+  "decision_id": "gov-001",
+  "inputs": {
+    "proposal": "Upgrade decision protocol",
+    "voters": 42
+  },
+  "outputs": {
+    "result": "approved"
+  },
+  "metadata": {
+    "system": "governance-service"
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key": "PUBLIC_KEY",
+    "value": "SIGNATURE"
+  }
 }
-
-
-
-
-
-\## Benefits
-
-
+Benefits
 
 Deterministic governance provides:
 
+transparency
 
+reproducibility
 
-\- transparency
+auditability
 
-\- reproducibility
+tamper detection
 
-\- auditability
+Relationship to DIP
 
-\- tamper evidence
+The Decision Integrity Protocol provides the technical infrastructure for deterministic governance by enabling verifiable decision artifacts.
 
+Implication
 
-
-\## Relationship to DIP
-
-
-
-The Decision Integrity Protocol provides the technical infrastructure required to implement deterministic governance systems.
-
+Governance decisions become verifiable events rather than opaque administrative actions.
