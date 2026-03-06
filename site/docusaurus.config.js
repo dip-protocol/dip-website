@@ -1,88 +1,54 @@
 // @ts-check
-import {themes as prismThemes} from 'prism-react-renderer';
 
-/** @type {import('@docusaurus/types').Config} */
 const config = {
 
   title: 'Decision Integrity Protocol',
-  tagline: 'Cryptographic protocol for verifiable decisions',
+  tagline: 'Verifiable Decision Systems',
 
   url: 'https://dip-protocol.github.io',
-baseUrl: '/dip-website/',,
-
-  organizationName: 'dip-protocol',
-  projectName: 'dip-website',
+  baseUrl: '/dip-website/',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
   favicon: 'img/favicon.ico',
 
+  organizationName: 'dip-protocol',
+  projectName: 'dip-website',
+
   presets: [
     [
       'classic',
       ({
         docs: {
-          sidebarPath: './sidebars.js',
-          routeBasePath: '/docs',
+          sidebarPath: require.resolve('./sidebars.js'),
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
   ],
 
-  themeConfig:
-    ({
-      navbar: {
-        title: 'DIP',
-        items: [
-          {
-            to: '/docs/intro',
-            label: 'Documentation',
-            position: 'left',
-          },
-          {
-            href: 'https://github.com/dip-protocol',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Introduction',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/dip-protocol',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Decision Integrity Protocol`,
-      },
-
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-
-    }),
+  themeConfig: ({
+    navbar: {
+      title: 'DIP Documentation',
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Docs',
+        },
+        {
+          href: 'https://github.com/dip-protocol',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+  }),
 };
 
-export default config;
+module.exports = config;
