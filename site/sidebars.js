@@ -2,6 +2,7 @@ const sidebars = {
   docs: [
 
     'why-dip-matters',
+    'market-opportunity',
     'intro',
     'quickstart',
 
@@ -14,7 +15,7 @@ const sidebars = {
         'protocol/decision-artifact',
         'protocol/cryptography',
         'protocol/lifecycle'
-      ]
+      ],
     },
 
     {
@@ -23,7 +24,7 @@ const sidebars = {
       items: [
         'cli',
         'registry'
-      ]
+      ],
     },
 
     {
@@ -36,7 +37,18 @@ const sidebars = {
         'research/transparency-ledger-model',
         'research/decision-integrity-theory',
         'research/verifiable-decision-infrastructure'
-      ]
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Use Cases',
+      items: [
+        'use-cases/index',
+        'use-cases/ai-governance',
+        'use-cases/financial-systems',
+        'use-cases/regulatory-compliance'
+      ],
     },
 
     {
@@ -45,7 +57,7 @@ const sidebars = {
       items: [
         'whitepaper',
         'whitepaper/dip-whitepaper'
-      ]
+      ],
     },
 
     'architecture'
