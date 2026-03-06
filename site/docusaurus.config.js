@@ -7,8 +7,8 @@ const config = {
   title: 'Decision Integrity Protocol',
   tagline: 'Cryptographic protocol for verifiable decisions',
 
-  url: 'http://deterministicgovernance.org',
-  baseUrl: '/',
+  url: 'https://dip-protocol.github.io',
+baseUrl: '/dip-website/',,
 
   organizationName: 'dip-protocol',
   projectName: 'dip-website',
