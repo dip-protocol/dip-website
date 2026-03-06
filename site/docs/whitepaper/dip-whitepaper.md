@@ -1,3 +1,9 @@
+## Download
+
+Download the full whitepaper:
+
+[Download PDF](/papers/dip-whitepaper.pdf)
+
 title: DIP Whitepaper
 sidebar_position: 1
 ---
