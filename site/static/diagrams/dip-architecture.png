@@ -1,0 +1,13 @@
+Decision System
+      │
+      ▼
+Decision Artifact
+      │
+      ▼
+Cryptographic Signing
+      │
+      ▼
+Verification Engine
+      │
+      ▼
+Transparency Registry

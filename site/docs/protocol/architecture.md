@@ -54,3 +54,5 @@ Transparency Registry
 
 This architecture ensures verifiable decision records.
 
+![DIP Architecture](/img/dip-architecture.png)
+

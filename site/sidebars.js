@@ -10,14 +10,15 @@ const sidebars = {
     },
 
     {
-      type: 'category',
-      label: 'Protocol',
-      items: [
-        'protocol/architecture',
-        'protocol/decision-artifact',
-        'protocol/cryptography',
-      ],
-    },
+  type: 'category',
+  label: 'Protocol',
+  items: [
+    'protocol/architecture',
+    'protocol/decision-artifact',
+    'protocol/cryptography',
+    'protocol/lifecycle',
+  ],
+},
 
     {
       type: 'category',
