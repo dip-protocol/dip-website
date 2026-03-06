@@ -1,116 +1,262 @@
-## Download
+## title: DIP Whitepaper
 
-Download the full whitepaper:
+## sidebar\_position: 1
 
-[Download PDF](/papers/dip-whitepaper.pdf)
+## ---
 
-title: DIP Whitepaper
-sidebar_position: 1
----
+## 
 
-# Decision Integrity Protocol (DIP)
+## \# Decision Integrity Protocol (DIP)
 
-## Abstract
+## 
 
-The Decision Integrity Protocol (DIP) provides a framework for producing cryptographically verifiable decision artifacts.
+## \## Abstract
 
-Modern automated systems frequently generate decisions without producing verifiable evidence explaining how the decision occurred.
+## 
 
-DIP introduces a protocol that enables systems to produce signed decision artifacts that can be independently verified and recorded in transparency registries.
+## The Decision Integrity Protocol (DIP) defines a framework for producing cryptographically verifiable decision artifacts.
 
-## 1. Introduction
+## 
 
-Automated decision systems increasingly influence financial systems, governance systems, and machine learning services.
+## Automated systems often produce decisions without verifiable evidence explaining how the decision was generated. DIP addresses this problem by creating signed decision artifacts that can be independently verified.
 
-However, these systems often lack transparency and auditability.
+## 
 
-DIP addresses this problem by enabling systems to generate verifiable decision records.
+## ---
 
-## 2. Problem Statement
+## 
 
-Many decision systems suffer from:
+## \## Download
 
-- lack of reproducibility
-- lack of audit evidence
-- lack of tamper detection
+## 
 
-Without verifiable artifacts, decisions cannot be independently validated.
+## Download the full whitepaper:
 
-## 3. Decision Artifact Model
+## 
 
-A decision artifact represents a structured record describing a decision event.
+## \[Download PDF](/papers/dip-whitepaper.pdf)
 
-Example artifact:
+## 
 
+## ---
 
-{
-decision_id,
-inputs,
-outputs,
-metadata,
-signature,
-timestamp,
-version
-}
+## 
 
+## \# 1. Introduction
 
-Artifacts must be serialized using canonical JSON before signing.
+## 
 
-## 4. Cryptographic Signing
+## Automated decision systems increasingly influence financial systems, governance systems, and machine learning services.
 
-DIP uses Ed25519 signatures to provide cryptographic integrity.
+## 
 
-Signing process:
+## However, these systems often lack transparency and auditability.
 
-1. Canonicalize JSON artifact
-2. Compute hash
-3. Sign using private key
+## 
 
-Verification process:
+## DIP introduces a protocol that enables systems to generate verifiable decision records.
 
-1. Recompute hash
-2. Verify signature using public key
+## 
 
-## 5. Transparency Registry
+## ---
 
-Artifacts may be published to an append-only transparency registry.
+## 
 
-Each registry record contains:
+## \# 2. Decision Artifact Model
 
-- artifact
-- previous hash
-- record hash
+## 
 
-This produces a tamper-evident chain.
+## A decision artifact is a structured JSON record describing a decision.
 
-## 6. Verification
+## 
 
-Verification ensures:
+## Example artifact:
 
-- artifact integrity
-- signature validity
-- registry consistency
+## 
 
-Verification may be performed independently without trusting the producing system.
+## ```json
 
-## 7. Applications
+## {
 
-Possible applications include:
+## &nbsp; "decision\_id": "dec-2026-001",
 
-- machine learning decision auditing
-- financial transaction verification
-- governance decision transparency
-- regulatory compliance evidence
+## &nbsp; "inputs": {
 
-## 8. Future Work
+## &nbsp;   "customer\_id": "CUST-12345",
 
-Future developments may include:
+## &nbsp;   "risk\_score": 0.82
 
-- multi-language verifier libraries
-- decentralized registries
-- governance proposals
-- protocol standardization
+## &nbsp; },
+
+## &nbsp; "outputs": {
+
+## &nbsp;   "decision": "approve"
+
+## &nbsp; },
+
+## &nbsp; "metadata": {
+
+## &nbsp;   "system": "fraud-detection-service",
+
+## &nbsp;   "model\_version": "v3.2"
+
+## &nbsp; },
+
+## &nbsp; "signature": {
+
+## &nbsp;   "algorithm": "ed25519",
+
+## &nbsp;   "public\_key": "PUBLIC\_KEY",
+
+## &nbsp;   "value": "SIGNATURE"
+
+## &nbsp; },
+
+## &nbsp; "timestamp": "2026-03-05T12:00:00Z",
+
+## &nbsp; "version": "1.0"
+
+## }
+
+## 3\. Cryptographic Signing
+
+## 
+
+## DIP uses Ed25519 signatures to guarantee artifact integrity.
+
+## 
+
+## Signing process:
+
+## 
+
+## Canonicalize the artifact JSON
+
+## 
+
+## Compute a cryptographic hash
+
+## 
+
+## Sign the hash using the private key
+
+## 
+
+## Verification process:
+
+## 
+
+## Recompute the artifact hash
+
+## 
+
+## Verify the signature using the public key
+
+## 
+
+## 4\. Transparency Registry
+
+## 
+
+## Artifacts may be published into an append-only transparency registry.
+
+## 
+
+## Each registry record contains:
+
+## 
+
+## artifact
+
+## 
+
+## previous hash
+
+## 
+
+## record hash
+
+## 
+
+## This creates a tamper-evident chain.
+
+## 
+
+## 5\. Verification
+
+## 
+
+## Verification ensures:
+
+## 
+
+## artifact integrity
+
+## 
+
+## signature validity
+
+## 
+
+## registry consistency
+
+## 
+
+## Independent systems can perform verification without trusting the original producer.
+
+## 
+
+## 6\. Applications
+
+## 
+
+## Possible applications include:
+
+## 
+
+## machine learning decision auditing
+
+## 
+
+## financial transaction verification
+
+## 
+
+## governance transparency
+
+## 
+
+## regulatory compliance
+
+## 
+
+## 7\. Future Work
+
+## 
+
+## Future development areas include:
+
+## 
+
+## multi-language verification libraries
+
+## 
+
+## decentralized registries
+
+## 
+
+## governance proposals
+
+## 
+
+## protocol standardization
+
+## 
 
 ## Conclusion
 
-The Decision Integrity Protocol enables verifiable decision systems by combining structured decision 
+## 
+
+## The Decision Integrity Protocol enables verifiable decision systems through structured artifacts, cryptographic signatures, and transparency registries.
+
