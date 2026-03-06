@@ -1,7 +1,42 @@
-module.exports = {
+const sidebars = {
   tutorialSidebar: [
-    'intro',
-    'architecture',
+
+    {
+      type: 'category',
+      label: 'Introduction',
+      items: [
+        'intro'
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Protocol',
+      items: [
+        'protocol/architecture',
+        'protocol/decision-artifact',
+        'protocol/cryptography',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Components',
+      items: [
+        'components/cli',
+        'components/registry',
+        'components/verifier',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Research',
+      items: [
+        'research/deterministic-governance',
+        'research/decision-artifact-specification'
+      ],
+    },
 
     {
       type: 'category',
@@ -11,16 +46,7 @@ module.exports = {
       ],
     },
 
-    {
-      type: 'category',
-      label: 'Research',
-      items: [
-        'research/index',
-        'research/decision-integrity-theory',
-        'research/deterministic-governance',
-        'research/decision-artifact-specification',
-        'research/transparency-ledger-model'
-      ],
-    },
   ],
 };
+
+module.exports = sidebars;

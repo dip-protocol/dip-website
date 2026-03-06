@@ -1,43 +1,17 @@
-import React from 'react';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
+<h1>Decision Integrity Protocol (DIP)</h1>
 
-export default function Home() {
-  return (
-    <Layout
-      title="Decision Integrity Protocol"
-      description="Cryptographic protocol for verifiable decisions"
-    >
-      <main style={{padding: "40px", textAlign: "center"}}>
+<p>
+DIP is a cryptographic protocol for producing verifiable decision artifacts.
+It enables systems to generate signed decision records that can be independently verified.
+</p>
 
-        <h1>Decision Integrity Protocol (DIP)</h1>
+<h2>Core Components</h2>
 
-        <p style={{fontSize: "18px", maxWidth: "800px", margin: "auto"}}>
-          DIP is a cryptographic protocol for producing verifiable decision artifacts.
-          It enables systems to generate signed decision records that can be independently verified,
-          ensuring transparency, auditability, and integrity.
-        </p>
+<ul>
+<li>Decision Artifact Specification</li>
+<li>Cryptographic Signing</li>
+<li>Verification Engine</li>
+<li>Transparency Registry</li>
+</ul>
 
-        <br/>
-
-        <Link
-          className="button button--primary button--lg"
-          to="/docs/intro">
-          Read the Documentation
-        </Link>
-
-        <br/><br/>
-
-        <h2>Core Components</h2>
-
-        <ul style={{listStyle: "none", fontSize: "16px"}}>
-          <li>📜 DIP Specification</li>
-          <li>🔐 Signing & Verification CLI</li>
-          <li>📦 Evidence Registry</li>
-          <li>📚 Documentation & Governance</li>
-        </ul>
-
-      </main>
-    </Layout>
-  );
-}
+<a href="/dip-website/docs/intro">Read the Documentation</a>
