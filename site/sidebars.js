@@ -1,32 +1,26 @@
 const sidebars = {
-  tutorialSidebar: [
+  docs: [
+    'intro',
+    'quickstart',
 
     {
       type: 'category',
-      label: 'Introduction',
+      label: 'Protocol',
       items: [
-        'intro'
+        'protocol',
+        'protocol/architecture',
+        'protocol/decision-artifact',
+        'protocol/cryptography',
+        'protocol/lifecycle',
       ],
     },
-
-    {
-  type: 'category',
-  label: 'Protocol',
-  items: [
-    'protocol/architecture',
-    'protocol/decision-artifact',
-    'protocol/cryptography',
-    'protocol/lifecycle',
-  ],
-},
 
     {
       type: 'category',
       label: 'Components',
       items: [
-        'components/cli',
-        'components/registry',
-        'components/verifier',
+        'cli',
+        'registry',
       ],
     },
 
@@ -34,8 +28,11 @@ const sidebars = {
       type: 'category',
       label: 'Research',
       items: [
+        'research/index',
+        'research/decision-integrity-theory',
         'research/deterministic-governance',
-        'research/decision-artifact-specification'
+        'research/transparency-ledger-model',
+        'research/decision-artifact-specification',
       ],
     },
 
@@ -43,10 +40,9 @@ const sidebars = {
       type: 'category',
       label: 'Whitepaper',
       items: [
-        'whitepaper/dip-whitepaper'
+        'whitepaper/dip-whitepaper',
       ],
     },
-
   ],
 };
 
