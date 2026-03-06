@@ -2,12 +2,12 @@ module.exports = {
   tutorialSidebar: [
     {
       type: 'doc',
-      id: 'Intro',
+      id: 'intro',
       label: 'Introduction',
     },
     {
       type: 'doc',
-      id: 'Architecture',
+      id: 'architecture',
       label: 'Architecture',
     },
     {
@@ -26,7 +26,7 @@ module.exports = {
         },
         {
           type: 'doc',
-          id: 'QuickStart',
+          id: 'quickstart',
           label: 'Quick Start',
         },
       ],
