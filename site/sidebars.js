@@ -1,35 +1,23 @@
-module.exports = {
-  tutorialSidebar: [
-    {
-      type: 'doc',
-      id: 'intro',
-      label: 'Introduction',
-    },
-    {
-      type: 'doc',
-      id: 'architecture',
-      label: 'Architecture',
-    },
-    {
-      type: 'doc',
-      id: 'research/overview',
-      label: 'Research Papers',
-    },
+const sidebars = {
+
+  docsSidebar: [
+
+    'Intro',
+    'Architecture',
+
     {
       type: 'category',
-      label: 'Developers',
+      label: 'Research',
       items: [
-        {
-          type: 'doc',
-          id: 'Overview',
-          label: 'Overview',
-        },
-        {
-          type: 'doc',
-          id: 'quickstart',
-          label: 'Quick Start',
-        },
+        'research/overview',
+        'research/dip-001',
       ],
     },
+
+    'QuickStart',
+
   ],
+
 };
+
+module.exports = sidebars;

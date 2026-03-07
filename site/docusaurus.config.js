@@ -1,8 +1,10 @@
 // @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
 
 const config = {
+
   title: 'Decision Integrity Protocol',
-  tagline: 'Deterministic Governance and Verifiable Decision Systems',
+  tagline: 'Deterministic Governance Infrastructure',
   favicon: 'img/favicon.ico',
 
   url: 'https://deterministicgovernance.org',
@@ -22,54 +24,66 @@ const config = {
   presets: [
     [
       'classic',
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
+          routeBasePath: '/', 
         },
+
         blog: false,
+
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
 
-  themeConfig:
-    ({
-      navbar: {
-        title: 'Decision Integrity Protocol',
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Documentation',
-          },
-          {
-            href: 'https://github.com/dip-protocol',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
+  themeConfig: {
 
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Research',
-            items: [
-              {
-                label: 'DIP Research Papers',
-                to: '/research/overview',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Decision Integrity Protocol`,
-      },
-    }),
+    navbar: {
+      title: 'Decision Integrity Protocol',
+      items: [
+        {
+          to: '/',
+          label: 'Documentation',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/dip-protocol',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Research',
+          items: [
+            {
+              label: 'DIP Research Papers',
+              to: '/research/overview',
+            },
+          ],
+        },
+        {
+          title: 'Developer Resources',
+          items: [
+            {
+              label: 'GitHub Organization',
+              href: 'https://github.com/dip-protocol',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Decision Integrity Protocol`,
+    },
+
+  },
+
 };
 
 module.exports = config;

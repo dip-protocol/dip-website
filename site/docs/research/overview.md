@@ -1,128 +1,47 @@
-```markdown
----
-title: DIP Research Papers
-sidebar_label: Research Papers
----
-
 # DIP Research Papers
 
 The **Decision Integrity Protocol (DIP)** research program defines the
-architecture and verification models behind deterministic governance systems.
+architecture, verification models, and governance concepts behind
+deterministic decision systems.
+
+The research series consists of five papers.
 
 ---
 
-## DIP-001 — Decision Integrity Protocol
+## DIP-001 - Decision Integrity Protocol
 
-Author: **Pavan Dev Singh Charak**  
-Year: **2026**
+Introduces the architecture and motivation behind the Decision Integrity Protocol.
 
-Download paper:  
-https://deterministicgovernance.org/papers/dip-001-whitepaper.pdf
-
-### Citation
-
-```
-
-@article{charak2026dip001,
-title={Decision Integrity Protocol},
-author={Charak, Pavan Dev Singh},
-year={2026},
-url={[https://deterministicgovernance.org/papers/dip-001-whitepaper.pdf}](https://deterministicgovernance.org/papers/dip-001-whitepaper.pdf})
-}
-
-```
+Download: [DIP-001 Whitepaper (PDF)](/papers/dip-001-whitepaper.pdf)
 
 ---
 
-## DIP-002 — Protocol Specification
+## DIP-002 - Protocol Specification
 
-Author: **Pavan Dev Singh Charak**  
-Year: **2026**
+Defines the canonical payload format, signing rules, and verification procedures of the protocol.
 
-Download paper:  
-https://deterministicgovernance.org/papers/dip-002-protocol-spec.pdf
-
-### Citation
-
-```
-
-@article{charak2026dip002,
-title={Decision Integrity Protocol Specification},
-author={Charak, Pavan Dev Singh},
-year={2026},
-url={[https://deterministicgovernance.org/papers/dip-002-protocol-spec.pdf}](https://deterministicgovernance.org/papers/dip-002-protocol-spec.pdf})
-}
-
-```
+Download: [DIP-002 Protocol Specification (PDF)](/papers/dip-002-protocol-spec.pdf)
 
 ---
 
-## DIP-003 — Decision Ledger
+## DIP-003 - Decision Ledger
 
-Author: **Pavan Dev Singh Charak**  
-Year: **2026**
+Describes the append-only registry used to store signed decision artifacts.
 
-Download paper:  
-https://deterministicgovernance.org/papers/dip-003-decision-ledger.pdf
-
-### Citation
-
-```
-
-@article{charak2026dip003,
-title={Decision Ledger Architecture},
-author={Charak, Pavan Dev Singh},
-year={2026},
-url={[https://deterministicgovernance.org/papers/dip-003-decision-ledger.pdf}](https://deterministicgovernance.org/papers/dip-003-decision-ledger.pdf})
-}
-
-```
+Download: [DIP-003 Decision Ledger (PDF)](/papers/dip-003-decision-ledger.pdf)
 
 ---
 
-## DIP-004 — Verification Model
+## DIP-004 - Verification Model
 
-Author: **Pavan Dev Singh Charak**  
-Year: **2026**
+Explains how independent verification systems validate decision records.
 
-Download paper:  
-https://deterministicgovernance.org/papers/dip-004-verification-model.pdf
-
-### Citation
-
-```
-
-@article{charak2026dip004,
-title={Verification Model for Decision Integrity Protocol},
-author={Charak, Pavan Dev Singh},
-year={2026},
-url={[https://deterministicgovernance.org/papers/dip-004-verification-model.pdf}](https://deterministicgovernance.org/papers/dip-004-verification-model.pdf})
-}
-
-```
+Download: [DIP-004 Verification Model (PDF)](/papers/dip-004-verification-model.pdf)
 
 ---
 
-## DIP-005 — Deterministic Governance
+## DIP-005 - Deterministic Governance
 
-Author: **Pavan Dev Singh Charak**  
-Year: **2026**
+Explores governance systems built on verifiable decision infrastructures.
 
-Download paper:  
-https://deterministicgovernance.org/papers/dip-005-deterministic-governance.pdf
-
-### Citation
-
-```
-
-@article{charak2026dip005,
-title={Deterministic Governance Systems},
-author={Charak, Pavan Dev Singh},
-year={2026},
-url={[https://deterministicgovernance.org/papers/dip-005-deterministic-governance.pdf}](https://deterministicgovernance.org/papers/dip-005-deterministic-governance.pdf})
-}
-
-```
-```
-
----
+Download: [DIP-005 Deterministic Governance (PDF)](/papers/dip-005-deterministic-governance.pdf)
