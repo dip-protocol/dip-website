@@ -1,9 +1,11 @@
+---
+title: Decision Integrity Protocol
+sidebar_position: 1
+---
+
 # Decision Integrity Protocol (DIP)
 
-The Decision Integrity Protocol enables deterministic systems to produce
-cryptographically verifiable decision records.
-
----
+DIP is a cryptographic protocol for producing verifiable decision artifacts.
 
 ## Documentation
 
