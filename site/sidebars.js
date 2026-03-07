@@ -2,9 +2,9 @@
 
 const sidebars = {
   tutorialSidebar: [
-    'intro',
-    'architecture',
-    'quickstart',
+    'Intro',
+    'Architecture',
+    'QuickStart',
     {
       type: 'category',
       label: 'Research',
