@@ -1,47 +1,60 @@
 ---
-sidebar_position: 1
+id: intro
+title: Decision Integrity Protocol
 ---
 
-# Tutorial Intro
+# Decision Integrity Protocol (DIP)
 
-Let's discover **Docusaurus in less than 5 minutes**.
+The **Decision Integrity Protocol (DIP)** is an infrastructure protocol for
+**deterministic governance and decision verification**.
 
-## Getting Started
+DIP enables systems to:
 
-Get started by **creating a new site**.
+- produce verifiable decision artifacts
+- cryptographically sign governance decisions
+- record immutable decision evidence
+- verify execution-to-evidence pipelines
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+The protocol defines a deterministic interface between:
 
-### What you'll need
+- **Decision Producers**
+- **Verification Engines**
+- **Evidence Ledgers**
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+---
 
-## Generate a new site
+## Core Components
 
-Generate a new Docusaurus site using the **classic template**.
+### Decision Artifact
 
-The classic template will automatically be added to your project after you run the command:
+A structured JSON payload representing a decision event.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### Canonicalization
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Deterministic serialization ensuring identical byte representation.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### Cryptographic Signature
 
-## Start your site
+Ed25519 signatures verify decision authenticity.
 
-Run the development server:
+### Decision Ledger
 
-```bash
-cd my-website
-npm run start
-```
+An append-only registry storing verifiable governance evidence.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+---
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+## Protocol Goals
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+1. Deterministic governance
+2. Verifiable execution evidence
+3. Independent verification
+4. Infrastructure-grade reliability
+
+---
+
+## DIP Resources
+
+- Protocol specification
+- Verification libraries
+- Decision ledger reference implementation
+- Research papers
