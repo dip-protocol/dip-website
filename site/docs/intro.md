@@ -1,32 +1,36 @@
 # Decision Integrity Protocol (DIP)
 
-The **Decision Integrity Protocol (DIP)** is a cryptographic framework for  
-**deterministic governance and verifiable decision systems**.
-
-DIP enables systems to generate **signed decision records** that can be  
-**independently verified and audited**.
+The Decision Integrity Protocol enables deterministic systems to produce
+cryptographically verifiable decision records.
 
 ---
 
-## Core Components
+## Documentation
 
-### Documentation Engine
-Generates structured decision artifacts from execution systems.
+Learn the architecture and design of the protocol.
 
-### Decision Payload
-Canonical representation of a decision event.
-
-### Decision Ledger
-Append-only registry storing signed decision payloads.
-
-### Verification Layer
-Independent verification of decision records.
+👉 [Protocol Architecture](./Architecture)
 
 ---
 
-## Research Program
+## Research Papers
 
-The DIP research program describes the architecture, verification model,
-and governance framework for deterministic decision systems.
+Read the academic research behind the protocol.
 
-Explore the **Research Papers** section in the sidebar.
+👉 [DIP Research Papers](./research/overview)
+
+---
+
+## Developer Guide
+
+Build systems that produce and verify decision artifacts.
+
+👉 [Developer Quick Start](./QuickStart)
+
+---
+
+## GitHub Repositories
+
+Source code and reference implementations.
+
+👉 https://github.com/dip-protocol
