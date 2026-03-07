@@ -14,13 +14,12 @@ export default function Home() {
 
         <p style={{fontSize: "18px"}}>
           DIP is a cryptographic protocol for producing verifiable decision artifacts.
-          It enables systems to generate signed decision records that can be
-          independently verified.
+          It enables systems to generate signed decision records that can be independently verified.
         </p>
 
         <div style={{marginTop: "40px"}}>
           <Link
-            to="/docs/intro"
+            to="/intro"
             style={{
               padding: "12px 24px",
               background: "#2e8555",
