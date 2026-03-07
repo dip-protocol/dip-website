@@ -26,11 +26,9 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/', // docs become homepage
+          routeBasePath: '/',   // docs become homepage
         },
-
         blog: false,
-
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -39,18 +37,17 @@ const config = {
   ],
 
   themeConfig: {
-
     navbar: {
       title: 'Decision Integrity Protocol',
       items: [
         {
-  to: '/Intro',
-  label: 'Documentation',
-  position: 'left',
-},
+          to: '/',
+          label: 'Documentation',
+          position: 'left',
+        },
         {
-          to: '/research/overview',
-          label: 'Research',
+          to: '/docs/intro',
+          label: 'Intro',
           position: 'left',
         },
         {
@@ -60,32 +57,6 @@ const config = {
         },
       ],
     },
-
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Research',
-          items: [
-            {
-              label: 'DIP Research Papers',
-              to: '/research/overview',
-            },
-          ],
-        },
-        {
-          title: 'Developer Resources',
-          items: [
-            {
-              label: 'GitHub Organization',
-              href: 'https://github.com/dip-protocol',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Decision Integrity Protocol`,
-    },
-
   },
 
 };
