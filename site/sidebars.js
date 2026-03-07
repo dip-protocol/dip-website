@@ -1,17 +1,10 @@
+// @ts-check
+
 const sidebars = {
-
-  docsSidebar: [
-    {
-      type: 'doc',
-      id: 'Intro',
-      label: 'Introduction',
-    },
-
-    {
-      type: 'doc',
-      id: 'Architecture',
-      label: 'Architecture',
-    },
+  tutorialSidebar: [
+    'Intro',
+    'Architecture',
+    'QuickStart',
 
     {
       type: 'category',
@@ -21,14 +14,7 @@ const sidebars = {
         'research/dip-001',
       ],
     },
-
-    {
-      type: 'doc',
-      id: 'QuickStart',
-      label: 'Quick Start',
-    },
   ],
-
 };
 
 module.exports = sidebars;
