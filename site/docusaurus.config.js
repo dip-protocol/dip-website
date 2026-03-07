@@ -26,9 +26,10 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',   // docs become homepage
         },
+
         blog: false,
+
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -37,17 +38,13 @@ const config = {
   ],
 
   themeConfig: {
+
     navbar: {
       title: 'Decision Integrity Protocol',
       items: [
         {
-          to: '/',
+          to: '/intro',
           label: 'Documentation',
-          position: 'left',
-        },
-        {
-          to: '/docs/intro',
-          label: 'Intro',
           position: 'left',
         },
         {
@@ -57,6 +54,32 @@ const config = {
         },
       ],
     },
+
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Documentation',
+          items: [
+            {
+              label: 'Intro',
+              to: '/intro',
+            },
+          ],
+        },
+        {
+          title: 'Project',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/dip-protocol',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Decision Integrity Protocol`,
+    },
+
   },
 
 };
