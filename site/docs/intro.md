@@ -58,3 +58,28 @@ An append-only registry storing verifiable governance evidence.
 - Verification libraries
 - Decision ledger reference implementation
 - Research papers
+
+## DIP Ecosystem
+
+The DIP project consists of several repositories.
+
+dip-spec
+Protocol specification and artifact schema.
+
+dip-go-verifier
+Reference verification library.
+
+dip-cli
+CLI tool for generating and verifying decision artifacts.
+
+dip-registry
+Append-only decision ledger.
+
+dip-website
+Documentation and protocol portal.
+
+dip-research
+Research papers and protocol analysis.
+
+dip-governance
+Protocol governance and DIP proposals.
