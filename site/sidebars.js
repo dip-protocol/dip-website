@@ -1,9 +1,17 @@
 const sidebars = {
 
   docsSidebar: [
+    {
+      type: 'doc',
+      id: 'Intro',
+      label: 'Introduction',
+    },
 
-    'Intro',
-    'Architecture',
+    {
+      type: 'doc',
+      id: 'Architecture',
+      label: 'Architecture',
+    },
 
     {
       type: 'category',
@@ -14,8 +22,11 @@ const sidebars = {
       ],
     },
 
-    'QuickStart',
-
+    {
+      type: 'doc',
+      id: 'QuickStart',
+      label: 'Quick Start',
+    },
   ],
 
 };
