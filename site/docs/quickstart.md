@@ -1,11 +1,7 @@
-````markdown
-
 ---
-
+id: quickstart
 title: Quick Start
-
-sidebar\_label: Quick Start
-
+sidebar_position: 3
 ---
 
 

@@ -1,4 +1,5 @@
 ---
+id: intro
 title: Decision Integrity Protocol
 sidebar_position: 1
 ---
