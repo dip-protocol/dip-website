@@ -1,5 +1,4 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
 const config = {
 
@@ -27,7 +26,7 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/', 
+          routeBasePath: '/',   // docs become homepage
         },
 
         blog: false,
@@ -45,8 +44,13 @@ const config = {
       title: 'Decision Integrity Protocol',
       items: [
         {
-          to: '/',
+          to: '/Intro',   // link directly to intro page
           label: 'Documentation',
+          position: 'left',
+        },
+        {
+          to: '/research/overview',
+          label: 'Research',
           position: 'left',
         },
         {
