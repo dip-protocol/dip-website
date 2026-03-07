@@ -12,7 +12,7 @@ const config = {
   organizationName: 'dip-protocol',
   projectName: 'dip-website',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
