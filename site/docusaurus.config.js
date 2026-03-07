@@ -26,7 +26,7 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',   // docs become homepage
+          routeBasePath: '/', // docs become homepage
         },
 
         blog: false,
@@ -44,10 +44,10 @@ const config = {
       title: 'Decision Integrity Protocol',
       items: [
         {
-          to: '/Intro',   // link directly to intro page
-          label: 'Documentation',
-          position: 'left',
-        },
+  to: '/Intro',
+  label: 'Documentation',
+  position: 'left',
+},
         {
           to: '/research/overview',
           label: 'Research',
