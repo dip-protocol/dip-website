@@ -5,7 +5,6 @@ const sidebars = {
     'Intro',
     'Architecture',
     'QuickStart',
-
     {
       type: 'category',
       label: 'Research',
